@@ -1,0 +1,132 @@
+/* src/assets/dark.css */
+
+/* Global Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for better readability */
+  }
+  
+  /* Typography */
+  .dark-mode h1,
+  .dark-mode h2,
+  .dark-mode h3,
+  .dark-mode h4,
+  .dark-mode h5,
+  .dark-mode h6 {
+    color: #ffffff; /* White for headings */
+  }
+  
+  .dark-mode p {
+    color: #b0b0b0; /* Slightly lighter text for paragraphs */
+  }
+  
+  /* Cards */
+  .dark-mode .product-card {
+    background-color: #1e1e1e; /* Dark card background */
+    color: #e0e0e0; /* Light text */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05); /* Subtle shadow */
+    border: 1px solid #333; /* Add a subtle border for depth */
+  }
+  
+  .dark-mode .product-card:hover {
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1); /* Enhanced shadow on hover */
+  }
+  
+  /* Cart Items */
+  .dark-mode .cart-item {
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05); /* Subtle shadow */
+    border: 1px solid #333; /* Add a subtle border for depth */
+  }
+  
+  /* Checkout Section */
+  .dark-mode .checkout-section {
+    background-color: #1e1e1e; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05); /* Subtle shadow */
+    border: 1px solid #333; /* Add a subtle border for depth */
+  }
+  
+  /* Header */
+  .dark-mode .header {
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* White text */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+  }
+  
+  /* Footer */
+  .dark-mode .footer {
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* White text */
+    box-shadow: 0 -2px 4px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+  }
+  
+  /* Buttons */
+  .dark-mode button {
+    background-color: #00ABE4; /* Primary button color */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .dark-mode button:hover {
+    background-color: #0078a0; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  .dark-mode button:active {
+    transform: translateY(0); /* Reset on click */
+  }
+  
+  /* Links */
+  .dark-mode a {
+    color: #00ABE4; /* Primary link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .dark-mode a:hover {
+    color: #0078a0; /* Darker shade on hover */
+  }
+  
+  /* Input Fields */
+  .dark-mode input,
+  .dark-mode textarea,
+  .dark-mode select {
+    background-color: #333; /* Dark input background */
+    color: #e0e0e0; /* Light text */
+    border: 1px solid #555; /* Subtle border */
+    border-radius: 4px;
+    padding: 8px;
+  }
+  
+  .dark-mode input:focus,
+  .dark-mode textarea:focus,
+  .dark-mode select:focus {
+    border-color: #00ABE4; /* Highlight focus with primary color */
+    outline: none;
+  }
+  
+  /* Dark Mode Toggle Button */
+  .dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Adjust icon size */
+    padding: 0;
+    margin-right: 20px; /* Add spacing between the toggle and other elements */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .dark-mode-toggle:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    opacity: 0.8; /* Slight fade effect on hover */
+  }
+  
+  .dark-mode-toggle:active {
+    transform: scale(0.9); /* Slight shrink effect on click */
+  }
