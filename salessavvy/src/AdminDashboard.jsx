@@ -1,4 +1,4 @@
-//AdminDashboard.jsx
+// AdminDashboard.jsx
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "./Footer";
@@ -6,13 +6,11 @@ import Logo from "./Logo";
 import "./assets/styles.css";
 import CustomModal from "./CustomModal";
 
-
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [modalType, setModalType] = useState(null); // State to manage modal visibility and type
   const [modalData, setModalData] = useState(null); // State to store data passed to modal (if needed)
   const [response, setResponse] = useState(null); // State to store API responses
-
 
   // Centralized card data
   const cardData = [
@@ -66,7 +64,6 @@ const AdminDashboard = () => {
     },
   ];
 
-
   const handleLogout = async () => {
     try {
       const response = await fetch("http://localhost:9090/api/auth/logout", {
@@ -83,7 +80,6 @@ const AdminDashboard = () => {
       console.error("Error during logout:", error);
     }
   };
-
 
   // Handlers for each modal action
   const handleAddProductSubmit = async (productData) => {
@@ -103,7 +99,6 @@ const AdminDashboard = () => {
       console.error("Error adding product:", error);
     }
   };
-
 
   const handleDeleteProductSubmit = async ({ productId }) => {
     try {
@@ -131,10 +126,9 @@ const AdminDashboard = () => {
     }
   };
 
-
   const handleViewUserSubmit = async ({ userId }) => {
     try {
-      const response = await fetch("http://localhost:9090/admin/user/getbyid", {
+      const response = await fetch("http://localhost:9090/admin/users/getbyid", {
         method: "POST",
         credentials: "include",
         headers: {
@@ -158,14 +152,13 @@ const AdminDashboard = () => {
     }
   };
 
-
   const handleModifyUserSubmit = async (data) => {
     if (!data.username) {
       // Fetch user details
       try {
         console.log("Fetching user details for ID:", data.userId); // Debugging
         const response = await fetch(
-          "http://localhost:9090/admin/user/getbyid",
+          "http://localhost:9090/admin/users/getbyid",
           {
             method: "POST",
             credentials: "include",
@@ -194,7 +187,7 @@ const AdminDashboard = () => {
       try {
         console.log("Updating user details:", data); // Debugging
         const response = await fetch(
-          "http://localhost:9090/admin/user/modify",
+          "http://localhost:9090/admin/users/modify",
           {
             method: "PUT",
             credentials: "include",
@@ -220,7 +213,6 @@ const AdminDashboard = () => {
       }
     }
   };
-
 
   const handleMonthlyBusiness = async (data) => {
     try {
@@ -250,7 +242,6 @@ const AdminDashboard = () => {
     }
   };
 
-
   const handleDailyBusiness = async (data) => {
     try {
       const response = await fetch(
@@ -278,7 +269,6 @@ const AdminDashboard = () => {
       setModalType("dailyBusiness");
     }
   };
-
 
   const handleYearlyBusiness = async (data) => {
     try {
@@ -308,7 +298,6 @@ const AdminDashboard = () => {
     }
   };
 
-
   const handleOverallBusiness = async () => {
     try {
       const response = await fetch(
@@ -337,7 +326,6 @@ const AdminDashboard = () => {
     }
   };
 
-
   return (
     <div className="admin-dashboard">
       {/* Header */}
@@ -352,7 +340,6 @@ const AdminDashboard = () => {
           </div>
         </div>
       </header>
-
 
       {/* Main Content */}
       <main className="dashboard-content">
@@ -376,10 +363,8 @@ const AdminDashboard = () => {
         </div>
       </main>
 
-
       {/* Footer */}
       <Footer />
-
 
       {/* Modal */}
       {modalType && (
@@ -416,7 +401,6 @@ const AdminDashboard = () => {
                 handleOverallBusiness();
                 break;
 
-
               // Add more cases here as needed
               default:
                 break;
@@ -428,6 +412,5 @@ const AdminDashboard = () => {
     </div>
   );
 };
-
 
 export default AdminDashboard;

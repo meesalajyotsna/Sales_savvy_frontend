@@ -623,7 +623,7 @@
   }
   
   .dashboard-header {
-    background-color: #0078d4;
+    background-color:darkcyan;
     color: white;
     display: flex;
     justify-content: space-between;
