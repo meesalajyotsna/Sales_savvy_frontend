@@ -126,11 +126,7 @@
   
   
   /* Header */
-  header {
-    background-color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-  }
+  
   
   /* Navigation */
   nav {
@@ -435,35 +431,9 @@
   }
   
   /* Footer */
-  .footer {
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
-  }
   
-  .footer-content {
-    display: flex;
-        justify-content: space-around;
-        align-items: center;
-  }
   
-  .footer-links a {
-    margin-right: 15px;
-    color: #00ABE4;
-    text-decoration: none;
-    font-size: 14px;
-  }
   
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 12px;
-    color: #777;
-  }
   .product-grid{
     display: flex;
     flex-wrap: wrap;
@@ -623,7 +593,7 @@
   }
   
   .dashboard-header {
-    background-color:darkcyan;
+    background-color:#008b8b;
     color: white;
     display: flex;
     justify-content: space-between;
