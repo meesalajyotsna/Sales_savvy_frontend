@@ -4,7 +4,7 @@ import './assets/styles.css';
 
 export function CategoryNavigation({ onCategoryClick }) {
   // Static categories list
-  const categories = ['Shirts', 'Pants', 'Accessories', 'Mobiles', 'Mobile Accessories'];
+  const categories = ['Shirts', 'Pants', 'Women', 'Mobiles', 'Accessories'];
 
   return (
     <nav className="category-navigation">
